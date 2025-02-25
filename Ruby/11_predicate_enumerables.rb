@@ -35,6 +35,7 @@ numbers.any? { |number| number < 20 }
 # otherwise, it will return false
 fruits = ["apple", "banana", "strawberry", "pineapple"]
 
+
 fruits.all? { |fruit| fruit.length > 3 }
 #=> true
 
