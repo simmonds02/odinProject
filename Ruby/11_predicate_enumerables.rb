@@ -12,7 +12,7 @@ numbers.include?(6)
 numbers.include?(3)
 #=> false
 
-friends = ['Sharon', 'Leo', 'Leila', 'Brian', 'Arun']
+friends = %w[Sharon Leo Leila Brian Arun]
 
 invited_list = friends.select { |friend| friend != 'Brian' }
 
@@ -33,7 +33,7 @@ numbers.any? { |number| number < 20 }
 ## All (.all)
 # returns true if all the elements in your array or hash match the condition you set within the block;
 # otherwise, it will return false
-fruits = ["apple", "banana", "strawberry", "pineapple"]
+fruits = %w[apple banana strawberry pineapple]
 
 fruits.all? { |fruit| fruit.length > 3 }
 #=> true
@@ -44,7 +44,7 @@ fruits.all? { |fruit| fruit.length > 6 }
 ## None (.none)
 # returns true only if the condition in the block matches none of the elements in your array or hash;
 # otherwise, it returns false
-fruits = ["apple", "banana", "strawberry", "pineapple"]
+fruits = %w[apple banana strawberry pineapple]
 
 fruits.none? { |fruit| fruit.length > 10 }
 #=> true

@@ -53,14 +53,14 @@ end
 # lib/flight.rb
 class Flight
   def introduce
-     puts "I'm on the flight!"
+    puts "I'm on the flight!"
   end
 end
 
 # lib/hotel.rb
 class Hotel
   def introduce
-     puts "I'm at the hotel!"
+    puts "I'm at the hotel!"
   end
 end
 
@@ -84,26 +84,27 @@ Hotel.new.introduce
 
 # not_so_green.rb
 module NotSoGreen
-    def self.food_opinion(food)
-      `#{food} is awesome!`
-    end
+  def self.food_opinion(food)
+    `#{food} is awesome!`
   end
-  # scheals.rb
-  module Scheals
-    def self.food_opinion(food)
-      `#{food} is awful!`
-    end
-  end
-  # main.rb
-  require_relative 'not_so_green'
-  require_relative 'scheals'
-  
-  puts NotSoGreen.food_opinion('Cereal')
-  #=> Cereal is awesome!
-  puts Scheals.food_opinion('Marmite')
-  #=> Marmite is awful!
-  puts food_opinion('Cereal')
-  #=> Errors out - there's no longer a free floating food_opinion method to use.
-  
+end
 
-  ## Gems
+# scheals.rb
+module Scheals
+  def self.food_opinion(food)
+    `#{food} is awful!`
+  end
+end
+# main.rb
+require_relative 'not_so_green'
+require_relative 'scheals'
+
+puts NotSoGreen.food_opinion('Cereal')
+#=> Cereal is awesome!
+puts Scheals.food_opinion('Marmite')
+#=> Marmite is awful!
+puts food_opinion('Cereal')
+#=> Errors out - there's no longer a free floating food_opinion method to use.
+
+
+## Gems

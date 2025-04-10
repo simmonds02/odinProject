@@ -11,7 +11,7 @@ def isogram?(string)
   original_length == unique_length
 end
 
-isogram?("Odin")
+isogram?('Odin')
 
 
 def yell_greeting(string)
