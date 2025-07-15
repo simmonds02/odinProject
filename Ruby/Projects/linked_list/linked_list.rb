@@ -2,7 +2,7 @@
 
 class LinkedList
 
-  attr_accessor :head, :tail, :name
+  attr_accessor :head, :tail
 
 
   def initialize(head = nil, tail = nil)
@@ -198,10 +198,11 @@ class LinkedList
 end
 
 class Node
-  attr_accessor :value, :next_node
+  attr_accessor :value, :key, :next_node
 
-  def initialize(value = nil, next_node = nil)  
+  def initialize(value = nil, key = nil, next_node = nil)  
         self.value = value
+        self.key = key
         self.next_node = next_node
   end
 
