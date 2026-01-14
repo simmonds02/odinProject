@@ -42,7 +42,7 @@ end
 
 def mark_spot(board, spot)
     if ["x", "y"].include? board[spot]
-        puts "Spot already chosen, please chose again"
+        puts "Spot already chosen, please choose again"
         return
     end
 
@@ -58,20 +58,20 @@ def change_turn
 end
 
 def check_end_of_game(board)
-    if (check_tie(board) || check_horizontals(board) || check_verticals(board) || check_diagonals(board))
+    if (check_horizontals(board) || check_verticals(board) || check_diagonals(board) || check_tie(board))
         return true
     end
     return false
 end
 
 def check_horizontals(board)
-    if (board[0..2].all?("x") || board[0..2].all?("x"))
+    if (board[0..2].all?("x") || board[0..2].all?("y"))
         puts "Player #{board[0]} wins"
         return true
-    elsif(board[3..5].all?("x") || board[3..5].all?("x"))
+    elsif(board[3..5].all?("x") || board[3..5].all?("y"))
         puts "Player #{board[3]} wins"
         return true
-    elsif(board[6..8].all?("x") || board[6..8].all?("x"))
+    elsif(board[6..8].all?("x") || board[6..8].all?("y"))
         puts "Player #{board[6]} wins"
         return true
     end
@@ -109,4 +109,4 @@ def check_tie(board)
 end
 
 
-start_new_game
+# start_new_game
