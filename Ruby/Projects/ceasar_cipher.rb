@@ -35,12 +35,13 @@ def ceasar_cipher(text, key)
   # map back to string
   charArray.map! { |char| char.chr }
   newstring = charArray.join
-  puts newstring
+  return newstring
 end
 
-ceasar_cipher('whatever happens, happens', 1)
+# ceasar_cipher('whatever happens, happens', 1)
 
-
+# puts ceasar_cipher('Jamal', 5)
+# puts ceasar_cipher("Life's a Bitch and Then You Die", 10)
 
 #   for lowercase range = 97 - 122
 #   for uppercase range = 65 - 90

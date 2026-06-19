@@ -1,0 +1,2 @@
+---
+BUNDLE_BUILD__PSYCH: "--with-libyaml-dir=C:/msys64/ucrt64 --with-libyaml-include=C:/msys64/ucrt64/include --with-libyaml-lib=C:/msys64/ucrt64/lib"
